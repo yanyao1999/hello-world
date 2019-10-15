@@ -1,0 +1,125 @@
+﻿.card {           
+    position: relative;
+    display: inline-block;
+}
+
+.card .img-top {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.card:hover .img-top {
+    display: inline;
+}
+.header{
+    text-align:center;
+    font-family: Calibri; 
+    font-weight: bolder; 
+    font-style: normal; 
+    font-variant: normal; 
+    text-transform: uppercase;  
+}
+.headline{  
+     border: 2px solid;  
+}
+.divAll {
+    width: 1000px;
+    text-align: center;
+    margin: 0px auto;
+}
+#title{
+    font-family:Calibri;
+    font-weight:bold;
+}
+.wizardTitle, #wizardTitle{  
+    vertical-align:top;
+   
+}
+#divMenu{
+    width: 900px; 
+    text-align: center; 
+    align-content: center; 
+    margin: 0px auto;
+    font-family: Calibri;
+    font-weight:bold;
+    left:300px;
+}
+
+#divForm{
+    font-family:Calibri;
+}
+#divQ{
+    font-family:Calibri;
+}
+
+.valid{
+    color:red;
+        }
+
+.btnEDU{
+    font-size:20px;
+}
+#divAll{
+    width:900px;
+    margin:0px auto;
+    background-color:#d9ffff;
+
+}
+.contentHead{
+    width:900px;
+    margin:0px auto;
+    background-color:white;
+}
+.td1{
+    font-weight:bold;
+}
+ .tableDetail {
+    width: 700px;
+    border: 2px solid black;
+    margin: 0px auto;
+   text-align: center;
+}
+.title {
+     font-size: large;
+     font-weight: bolder;
+    text-decoration: underline;
+}
+
+ .level {
+   font-weight: bold;
+ }
+
+ .date {
+    font-weight: bold;
+    border-bottom: dashed;
+    border-bottom-color: black;
+}
+.btnEDU{
+    height:40px;
+    Font-Size:20px;
+    width:300px;
+    border: solid 2px black;
+    background-color:white;
+    font-weight:bold;
+}
+
+#top{
+    height:13px;    
+    text-align:right;
+    font-weight:bold;
+    width:1520px;
+}
+.tdspc{
+    width:15px;
+}
+.txtrange{
+    width:20px;
+}
+.select{
+    color:#6ff300;
+}
+
+

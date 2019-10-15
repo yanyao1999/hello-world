@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>ER YAN YAO's Site</title>
+    <link href="/css/new.css" rel="stylesheet" />
+    <link href="css/StyleSheet.css" rel="stylesheet" />
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Montserrat", sans-serif;
+        }
+        .w3-row-padding img {
+            margin-bottom: 12px;
+        }
+        .w3-sidebar {
+            width: 120px;
+            background: #222;
+        }
+        #main {
+            margin-left: 120px;
+        }
+        @media only screen and (max-width: 600px) {
+            #main {
+                margin-left: 0;
+            }
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="w3-black">
+    <form id="form1" runat="server">
+
+        <div id="top" runat="server">
+
+            <asp:ScriptManager ID="ScriptManager2" runat="server"></asp:ScriptManager>
+            <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                <ContentTemplate>
+                    <asp:Label ID="lblTime" runat="server"></asp:Label>&nbsp; &nbsp;
+                        <asp:Timer ID="Timer1" runat="server" Interval="1000"></asp:Timer>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+            <br />
+        </div>
+
+        <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+            <img src="img/photo-grey.jpg" style="width: 100%" />
+            <a href="Default.aspx" class="w3-bar-item w3-button w3-padding-large w3-black">
+                <i class="fa fa-home w3-xxlarge"></i>
+                <p>HOME</p>
+            </a>
+            <a href="Default.aspx#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+                <i class="fa fa-user w3-xxlarge"></i>
+                <p>ABOUT ME</p>
+            </a>
+            <a href="Education.aspx" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+                <i class="fa fa-book w3-xxlarge"></i>
+                <p>EDUCATION</p>
+            </a>
+            <a href="workExp.aspx" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+                <i class="fa fa-pencil w3-xxlarge"></i>
+                <p>WORK EXPERIENCE</p>
+            </a>
+            <a href="Contact.aspx" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+                <i class="fa fa-envelope w3-xxlarge"></i>
+                <p>CONTACT</p>
+            </a>
+            <a href="Feedback.aspx" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+                <i class="fa fa-info w3-xxlarge"></i>
+                <p>FEEDBACK</p>
+            </a>
+        </nav>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div>
+            <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+                <hr class="w3-opacity" />
+                <div style="text-align: right;" class="w3-medium">
+                    <asp:DropDownList ID="ddlMenu" runat="server">
+                        <asp:ListItem>HOME</asp:ListItem>
+                        <asp:ListItem>ABOUT ME</asp:ListItem>
+                        <asp:ListItem>EDUCATION</asp:ListItem>
+                        <asp:ListItem>WORK EXPERIENCE</asp:ListItem>
+                        <asp:ListItem>CONTACT</asp:ListItem>
+                        <asp:ListItem>FEEDBACK</asp:ListItem>
+                    </asp:DropDownList>
+                    <asp:Button ID="btnGO" class="w3-white w3-hover-gray" runat="server" Text="GO" OnClick="btnGO_Click" />
+                </div>
+
+                <p class="w3-medium">Copyright @ Er Yan Yao. All right will be reserved.</p>
+                <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+            </footer>
+
+        </div>
+        <script src="js/fixedtop.js"></script>
+    </form>
+</body>
+</html>
